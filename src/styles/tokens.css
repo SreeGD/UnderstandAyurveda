@@ -1,0 +1,119 @@
+/**
+ * Design tokens. Every colour is defined here on bare :root first, then
+ * re-declared under the dark media query — never defined only inside a media
+ * block, so nothing falls back to a browser default.
+ *
+ * Palette: warm neutrals (paper, earth) with a deep green primary, plus one
+ * accent per dosha. The dosha colours are used alongside labels and never as
+ * the sole carrier of meaning (FR-049).
+ */
+
+:root {
+  /* Surfaces */
+  --c-bg: #fbf9f4;
+  --c-surface: #ffffff;
+  --c-surface-sunken: #f4f0e7;
+  --c-border: #ddd6c8;
+  --c-border-strong: #bdb3a0;
+
+  /* Text */
+  --c-text: #23201a;
+  --c-text-muted: #5f594d;
+  --c-text-faint: #857e6f;
+
+  /* Brand */
+  --c-primary: #1f4d3d;
+  --c-primary-hover: #16382c;
+  --c-primary-text: #ffffff;
+  --c-primary-soft: #e3ede8;
+
+  /* Dosha accents — always paired with a text label */
+  --c-vata: #5b6bb5;
+  --c-vata-soft: #e6e9f6;
+  --c-pitta: #b5563b;
+  --c-pitta-soft: #f8e7e1;
+  --c-kapha: #3f7d5c;
+  --c-kapha-soft: #e2f0e8;
+
+  /* Status */
+  --c-warning: #8a5a12;
+  --c-warning-bg: #fdf3e0;
+  --c-warning-border: #e8c98a;
+  --c-danger: #96331f;
+  --c-danger-bg: #fbeae6;
+  --c-danger-border: #e5b0a2;
+  --c-success: #2f6a4a;
+  --c-success-bg: #e6f2ea;
+
+  --c-focus: #1f4d3d;
+
+  /* Type scale */
+  --f-body: ui-serif, Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
+  --f-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --f-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+
+  --t-xs: 0.78rem;
+  --t-sm: 0.88rem;
+  --t-base: 1rem;
+  --t-md: 1.13rem;
+  --t-lg: 1.35rem;
+  --t-xl: 1.65rem;
+  --t-2xl: 2.1rem;
+  --t-3xl: 2.6rem;
+
+  /* Spacing */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+
+  --radius: 8px;
+  --radius-lg: 14px;
+  --shadow: 0 1px 2px rgb(35 32 26 / 6%), 0 4px 12px rgb(35 32 26 / 6%);
+
+  --measure: 68ch;
+  --content-max: 1120px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --c-bg: #171613;
+    --c-surface: #201e1a;
+    --c-surface-sunken: #262320;
+    --c-border: #3a3630;
+    --c-border-strong: #555047;
+
+    --c-text: #f0ece3;
+    --c-text-muted: #b8b1a4;
+    --c-text-faint: #8d8578;
+
+    --c-primary: #7fc0a4;
+    --c-primary-hover: #9ad2ba;
+    --c-primary-text: #10261e;
+    --c-primary-soft: #21362e;
+
+    --c-vata: #97a5e6;
+    --c-vata-soft: #24273a;
+    --c-pitta: #e59a82;
+    --c-pitta-soft: #35251f;
+    --c-kapha: #7cc6a0;
+    --c-kapha-soft: #1f2f27;
+
+    --c-warning: #e5bb75;
+    --c-warning-bg: #2e2517;
+    --c-warning-border: #574524;
+    --c-danger: #e8a08e;
+    --c-danger-bg: #33201b;
+    --c-danger-border: #5c3830;
+    --c-success: #86c9a3;
+    --c-success-bg: #1d2e25;
+
+    --c-focus: #9ad2ba;
+
+    --shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 4px 12px rgb(0 0 0 / 25%);
+  }
+}

@@ -1,0 +1,109 @@
+.progressWrap {
+  margin-bottom: var(--s-5);
+}
+
+.progress {
+  height: 8px;
+  background: var(--c-surface-sunken);
+  border: 1px solid var(--c-border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--c-primary);
+  transition: width 200ms ease;
+}
+
+.progressLabel {
+  margin-top: var(--s-2);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  color: var(--c-text-muted);
+}
+
+.callout {
+  padding: var(--s-4);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--c-border-strong);
+  background: var(--c-surface-sunken);
+}
+
+.note {
+  border-left-color: var(--c-primary);
+  background: var(--c-primary-soft);
+}
+
+.warning {
+  border-left-color: var(--c-warning);
+  background: var(--c-warning-bg);
+}
+
+.misconception {
+  border-left-color: var(--c-pitta);
+  background: var(--c-pitta-soft);
+}
+
+.calloutLabel {
+  margin-bottom: var(--s-2);
+  font-family: var(--f-ui);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+}
+
+.calloutBody > * + * {
+  margin-top: var(--s-3);
+}
+
+.disclosure {
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  background: var(--c-surface);
+}
+
+.disclosureButton {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  width: 100%;
+  min-height: 44px;
+  padding: var(--s-3) var(--s-4);
+  background: none;
+  border: 0;
+  border-radius: var(--radius);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  color: var(--c-text);
+}
+
+.disclosureButton:hover {
+  background: var(--c-surface-sunken);
+}
+
+.chevron {
+  color: var(--c-text-muted);
+}
+
+.disclosureBody {
+  padding: 0 var(--s-4) var(--s-4);
+  border-top: 1px solid var(--c-border);
+  padding-top: var(--s-4);
+}
+
+.empty {
+  padding: var(--s-7) var(--s-4);
+  text-align: center;
+  max-width: 52ch;
+  margin: 0 auto;
+}
+
+.empty h2 {
+  margin-bottom: var(--s-4);
+}

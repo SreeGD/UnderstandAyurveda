@@ -1,0 +1,118 @@
+.storageBanner {
+  padding: var(--s-3) var(--s-4);
+  background: var(--c-warning-bg);
+  border-bottom: 1px solid var(--c-warning-border);
+  color: var(--c-text);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  text-align: center;
+}
+
+.masthead {
+  border-bottom: 1px solid var(--c-border);
+  background: var(--c-surface);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.mastheadInner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--s-3) var(--s-4);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+
+.brand {
+  font-family: var(--f-ui);
+  font-size: var(--t-md);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--c-text);
+  letter-spacing: -0.01em;
+}
+
+.brandAccent {
+  color: var(--c-primary);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 var(--s-3);
+  border-radius: var(--radius);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  text-decoration: none;
+  color: var(--c-text-muted);
+}
+
+.navLink:hover {
+  background: var(--c-surface-sunken);
+  color: var(--c-text);
+}
+
+/* Active state carries weight and an underline, not colour alone. */
+.navActive {
+  color: var(--c-primary);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+main:focus-visible {
+  outline: none;
+}
+
+.footer {
+  margin-top: var(--s-8);
+  border-top: 1px solid var(--c-border);
+  background: var(--c-surface-sunken);
+}
+
+.footerInner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--s-5) var(--s-4);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  color: var(--c-text-muted);
+  max-inline-size: var(--content-max);
+}
+
+.footerPrivacy {
+  margin-top: var(--s-2);
+  font-size: var(--t-xs);
+  color: var(--c-text-faint);
+}
+
+@media print {
+  .masthead,
+  .footer,
+  .storageBanner {
+    display: none;
+  }
+}
+
+@media (max-width: 40rem) {
+  .mastheadInner {
+    justify-content: flex-start;
+  }
+  .nav {
+    width: 100%;
+  }
+}

@@ -1,0 +1,129 @@
+.blend {
+  font-family: var(--f-ui);
+}
+
+.caption {
+  margin-bottom: var(--s-3);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--c-text-muted);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, auto) 1fr 3.2rem;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.name {
+  font-size: var(--t-sm);
+  font-weight: 600;
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-2);
+  flex-wrap: wrap;
+}
+
+.leadTag {
+  font-size: var(--t-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-text-faint);
+}
+
+.track {
+  position: relative;
+  display: block;
+  height: 20px;
+  background: var(--c-surface-sunken);
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.bar {
+  display: block;
+  height: 100%;
+  border-radius: 3px 0 0 3px;
+  transition: width 300ms ease;
+}
+
+.vata {
+  background: var(--c-vata);
+}
+.pitta {
+  background: var(--c-pitta);
+}
+.kapha {
+  background: var(--c-kapha);
+}
+
+.compareMark {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 2px;
+  background: var(--c-text);
+  transform: translateX(-1px);
+}
+
+.value {
+  font-size: var(--t-sm);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  text-align: right;
+}
+
+.legend {
+  margin-top: var(--s-3);
+  font-size: var(--t-xs);
+  color: var(--c-text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.legendMark {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background: var(--c-text);
+}
+
+@media (max-width: 30rem) {
+  .row {
+    grid-template-columns: 1fr 3.2rem;
+    grid-template-areas:
+      'name value'
+      'track track';
+    gap: var(--s-2);
+  }
+  .name {
+    grid-area: name;
+  }
+  .value {
+    grid-area: value;
+  }
+  .track {
+    grid-area: track;
+  }
+}
+
+@media print {
+  .bar {
+    /* Bars are background colour, which many printers drop — the numeric
+       value beside each bar is what actually carries the information. */
+    border: 1pt solid #000;
+  }
+}

@@ -1,0 +1,39 @@
+.disclaimer {
+  display: flex;
+  gap: var(--s-3);
+  align-items: flex-start;
+  padding: var(--s-3) var(--s-4);
+  background: var(--c-warning-bg);
+  border: 1px solid var(--c-warning-border);
+  border-radius: var(--radius);
+  color: var(--c-text);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  line-height: 1.5;
+}
+
+.standing {
+  margin-bottom: var(--s-5);
+}
+
+.icon {
+  flex: 0 0 auto;
+  font-size: 1.1em;
+  color: var(--c-warning);
+  line-height: 1.4;
+}
+
+.text {
+  margin: 0;
+}
+
+/* Must survive onto paper. A disclaimer that vanishes in print fails
+   Principle II exactly where the artifact outlives the screen. */
+@media print {
+  .disclaimer {
+    border: 1pt solid #000;
+    background: transparent;
+    color: #000;
+    page-break-inside: avoid;
+  }
+}

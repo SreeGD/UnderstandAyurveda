@@ -1,0 +1,207 @@
+.header {
+  max-width: var(--measure);
+  margin-bottom: var(--s-5);
+}
+
+.header h1 {
+  margin-bottom: var(--s-2);
+}
+
+.searchRow {
+  max-width: 34rem;
+  margin-bottom: var(--s-6);
+}
+
+.search {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 var(--s-4);
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius);
+  background: var(--c-surface);
+  font-family: var(--f-ui);
+  font-size: var(--t-base);
+}
+
+.results {
+  margin-bottom: var(--s-6);
+}
+
+.entryList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+}
+
+.entryCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  height: 100%;
+  padding: var(--s-4);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  background: var(--c-surface);
+  text-decoration: none;
+  color: var(--c-text);
+}
+
+.entryCard:hover {
+  border-color: var(--c-primary);
+  background: var(--c-primary-soft);
+  color: var(--c-text);
+}
+
+.entryName {
+  font-family: var(--f-ui);
+  font-size: var(--t-md);
+  font-weight: 600;
+}
+
+.entryCategory {
+  font-family: var(--f-ui);
+  font-size: var(--t-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-text-faint);
+}
+
+.entrySummary {
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  color: var(--c-text-muted);
+}
+
+.noResults {
+  max-width: var(--measure);
+  padding: var(--s-5);
+  border: 1px dashed var(--c-border-strong);
+  border-radius: var(--radius);
+}
+
+.noResults > * + * {
+  margin-top: var(--s-3);
+}
+
+.browse h2 {
+  margin-bottom: var(--s-4);
+}
+
+.categoryRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: var(--s-3);
+}
+
+.categoryButton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  padding: var(--s-4);
+  min-height: 44px;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  background: var(--c-surface);
+  text-align: left;
+  cursor: pointer;
+  color: var(--c-text);
+}
+
+.categoryButton:hover {
+  background: var(--c-surface-sunken);
+}
+
+.categoryActive {
+  border-color: var(--c-primary);
+  border-width: 2px;
+  padding: calc(var(--s-4) - 1px);
+  background: var(--c-primary-soft);
+}
+
+.categoryLabel {
+  font-family: var(--f-ui);
+  font-weight: 700;
+  font-size: var(--t-sm);
+}
+
+.categoryDesc {
+  font-family: var(--f-ui);
+  font-size: var(--t-xs);
+  color: var(--c-text-muted);
+}
+
+.breadcrumb {
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  color: var(--c-text-muted);
+  margin-bottom: var(--s-4);
+  text-transform: capitalize;
+}
+
+.entryHeader {
+  max-width: var(--measure);
+  margin-bottom: var(--s-5);
+}
+
+.entryHeader h1 {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
+
+.devanagari {
+  font-size: var(--t-lg);
+  font-weight: 400;
+  color: var(--c-text-muted);
+}
+
+.pronunciation {
+  margin-top: var(--s-2);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  letter-spacing: 0.04em;
+  color: var(--c-text-muted);
+}
+
+.summary {
+  margin-top: var(--s-3);
+  font-size: var(--t-md);
+}
+
+.entryFooter {
+  margin-top: var(--s-7);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--c-border);
+  max-width: var(--measure);
+}
+
+.entryFooter > * + * {
+  margin-top: var(--s-5);
+}
+
+.linkedSection h2 {
+  font-size: var(--t-md);
+  margin-bottom: var(--s-2);
+}
+
+.linkedSection ul {
+  padding-left: var(--s-5);
+}
+
+.relatedList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-5);
+  padding-left: var(--s-5);
+}
+
+/* Keep the route-level herb notice on the same measure as the body blocks,
+   so it does not read as a different kind of element. */
+.herbNotice {
+  max-width: var(--measure);
+  margin-bottom: var(--s-4);
+}

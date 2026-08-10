@@ -1,0 +1,140 @@
+import type { ReferenceEntry } from '../schema/reference'
+import { ASHTANGA_SUTRA, CHARAKA_SUTRA, EDITORIAL } from '../sources'
+
+export const doshaEntries: ReferenceEntry[] = [
+  {
+    id: 'ref-vata',
+    category: 'dosha',
+    name: 'Vata',
+    devanagari: 'वात',
+    aliases: ['vatha', 'vayu dosha', 'wind dosha'],
+    pronunciation: 'VAH-tuh',
+    summary: 'The dosha of movement — space and air. Dry, light, cold, mobile, rough.',
+    relatedEntries: ['ref-pitta', 'ref-kapha'],
+    linkedLessons: ['three-doshas', 'twenty-gunas'],
+    source: CHARAKA_SUTRA('12'),
+    body: [
+      {
+        kind: 'paragraph',
+        text: 'Vata governs everything that moves — breath, circulation, the passage of food, nerve signals, and thought. Because it is the only dosha that actually moves things, classical sources describe it as pushing the other two around.',
+        source: CHARAKA_SUTRA('12'),
+      },
+      {
+        kind: 'table',
+        headers: ['Aspect', 'Detail'],
+        rows: [
+          ['Elements', 'Space + Air'],
+          ['Qualities', 'Dry, light, cold, mobile, rough, subtle'],
+          ['Seat', 'Colon, pelvis, bones, skin, ears'],
+          ['Season', 'Autumn, and dry cold weather generally'],
+          ['Time of day', '2–6am and 2–6pm'],
+          ['Life stage', 'Older age'],
+        ],
+        source: ASHTANGA_SUTRA('1'),
+      },
+      {
+        kind: 'list',
+        ordered: false,
+        items: [
+          'Settled by: warmth, moisture, weight, regularity, quiet, oil',
+          'Unsettled by: cold, dryness, wind, travel, irregular meals, overstimulation',
+          'Favour tastes: sweet, sour, salty',
+          'Go easy on tastes: bitter, pungent, astringent',
+        ],
+        source: ASHTANGA_SUTRA('13'),
+      },
+    ],
+  },
+  {
+    id: 'ref-pitta',
+    category: 'dosha',
+    name: 'Pitta',
+    devanagari: 'पित्त',
+    aliases: ['pita', 'pittha', 'fire dosha'],
+    pronunciation: 'PIT-tuh',
+    summary: 'The dosha of transformation — fire and water. Hot, sharp, light, spreading.',
+    relatedEntries: ['ref-vata', 'ref-kapha'],
+    linkedLessons: ['three-doshas', 'agni-ama'],
+    source: CHARAKA_SUTRA('12'),
+    body: [
+      {
+        kind: 'paragraph',
+        text: 'Pitta governs conversion — food into tissue, light into sight, experience into judgement. Its physical face is digestion and body heat; its mental face is discernment and decisiveness.',
+        source: CHARAKA_SUTRA('12'),
+      },
+      {
+        kind: 'table',
+        headers: ['Aspect', 'Detail'],
+        rows: [
+          ['Elements', 'Fire + Water'],
+          ['Qualities', 'Hot, sharp, light, spreading, slightly oily, liquid'],
+          ['Seat', 'Small intestine, stomach, blood, eyes, skin'],
+          ['Season', 'Summer, and warm bright weather'],
+          ['Time of day', '10am–2pm and 10pm–2am'],
+          ['Life stage', 'Middle age'],
+        ],
+        source: ASHTANGA_SUTRA('1'),
+      },
+      {
+        kind: 'list',
+        ordered: false,
+        items: [
+          'Settled by: cooling, moderate heaviness, regular meals, unhurried time, greenery and water',
+          'Unsettled by: heat, delayed meals, alcohol, competition, pushing through without breaks',
+          'Favour tastes: sweet, bitter, astringent',
+          'Go easy on tastes: pungent, sour, salty',
+        ],
+        source: ASHTANGA_SUTRA('13'),
+      },
+    ],
+  },
+  {
+    id: 'ref-kapha',
+    category: 'dosha',
+    name: 'Kapha',
+    devanagari: 'कफ',
+    aliases: ['kapa', 'kaph', 'shleshma', 'earth dosha'],
+    pronunciation: 'KUH-fuh',
+    summary: 'The dosha of structure — water and earth. Heavy, cold, oily, slow, stable.',
+    relatedEntries: ['ref-vata', 'ref-pitta'],
+    linkedLessons: ['three-doshas', 'twenty-gunas'],
+    source: CHARAKA_SUTRA('12'),
+    body: [
+      {
+        kind: 'paragraph',
+        text: 'Kapha governs everything that holds together and endures — tissue bulk, lubrication, resilience, and steadiness of mood. It gives a body substance and a person patience.',
+        source: CHARAKA_SUTRA('12'),
+      },
+      {
+        kind: 'table',
+        headers: ['Aspect', 'Detail'],
+        rows: [
+          ['Elements', 'Water + Earth'],
+          ['Qualities', 'Heavy, cold, oily, slow, stable, smooth, dense, soft'],
+          ['Seat', 'Chest, stomach, joints, head'],
+          ['Season', 'Spring, and damp cold weather'],
+          ['Time of day', '6–10am and 6–10pm'],
+          ['Life stage', 'Childhood'],
+        ],
+        source: ASHTANGA_SUTRA('1'),
+      },
+      {
+        kind: 'list',
+        ordered: false,
+        items: [
+          'Settled by: movement, warmth, dryness, stimulation, variety, early rising',
+          'Unsettled by: inactivity, heavy or very sweet food, damp cold, daytime sleeping, sameness',
+          'Favour tastes: pungent, bitter, astringent',
+          'Go easy on tastes: sweet, sour, salty',
+        ],
+        source: ASHTANGA_SUTRA('13'),
+      },
+      {
+        kind: 'callout',
+        tone: 'note',
+        text: 'Most general wellness advice — rest more, be gentle with yourself, soothe — points in the direction Kapha already leans. This is the one pattern for which the usual advice is often exactly backwards.',
+        source: EDITORIAL,
+      },
+    ],
+  },
+]

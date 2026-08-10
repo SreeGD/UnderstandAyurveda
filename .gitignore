@@ -1,0 +1,19 @@
+node_modules/
+dist/
+dev-dist/
+coverage/
+
+*.log
+npm-debug.log*
+.env
+.env.*
+
+# Agent folders may hold credentials or auth artifacts
+.claude/
+
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/

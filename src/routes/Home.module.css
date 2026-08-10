@@ -1,0 +1,88 @@
+.hero {
+  max-width: var(--measure);
+  margin-bottom: var(--s-6);
+}
+
+.title {
+  font-size: var(--t-3xl);
+  margin-bottom: var(--s-4);
+}
+
+.lede {
+  font-size: var(--t-md);
+}
+
+.subLede {
+  margin-top: var(--s-3);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  color: var(--c-text-muted);
+}
+
+.resultCard {
+  max-width: 46rem;
+  margin-bottom: var(--s-7);
+}
+
+.resultCard > * + * {
+  margin-top: var(--s-4);
+}
+
+.cardActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}
+
+.paths {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--s-4);
+}
+
+.pathCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-5);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  background: var(--c-surface);
+  text-decoration: none;
+  color: var(--c-text);
+}
+
+.pathCard:hover {
+  border-color: var(--c-primary);
+  background: var(--c-primary-soft);
+  color: var(--c-text);
+}
+
+.pathCard h3 {
+  font-size: var(--t-md);
+}
+
+.pathCard p {
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  color: var(--c-text-muted);
+}
+
+.pathMeta {
+  margin-top: auto;
+  padding-top: var(--s-2);
+  font-size: var(--t-xs) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-text-faint) !important;
+}
+
+.offlineBanner {
+  padding: var(--s-3) var(--s-4);
+  background: var(--c-primary-soft);
+  border-bottom: 1px solid var(--c-primary);
+  color: var(--c-text);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  text-align: center;
+}

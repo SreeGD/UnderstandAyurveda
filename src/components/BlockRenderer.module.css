@@ -1,0 +1,246 @@
+.blocks {
+  max-width: var(--measure);
+}
+
+.blocks > * + * {
+  margin-top: var(--s-4);
+}
+
+.heading {
+  margin-top: var(--s-6) !important;
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--c-border);
+  font-size: var(--t-lg);
+}
+
+.claim > * + * {
+  margin-top: var(--s-2);
+}
+
+.list {
+  padding-left: var(--s-5);
+}
+
+.list li + li {
+  margin-top: var(--s-2);
+}
+
+/* ---- Term link and popover ---- */
+
+.termWrap {
+  position: relative;
+  display: inline;
+}
+
+.termButton {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--c-primary);
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+}
+
+.termButton:hover {
+  text-decoration-style: solid;
+}
+
+.popover {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 6px);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  width: min(22rem, 80vw);
+  padding: var(--s-4);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  line-height: 1.5;
+}
+
+.popTerm {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-2);
+  font-weight: 700;
+}
+
+.popPron {
+  font-weight: 400;
+  color: var(--c-text-muted);
+  font-size: var(--t-xs);
+}
+
+.popMeaning {
+  color: var(--c-text);
+}
+
+.popExample {
+  color: var(--c-text-muted);
+  font-style: italic;
+}
+
+.popClose {
+  align-self: flex-start;
+  min-height: 32px;
+  padding: 0 var(--s-3);
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius);
+  background: none;
+  font-size: var(--t-xs);
+  cursor: pointer;
+  color: var(--c-text);
+}
+
+/* ---- Term introduction ---- */
+
+.termIntro {
+  padding: var(--s-4);
+  background: var(--c-primary-soft);
+  border-left: 4px solid var(--c-primary);
+  border-radius: var(--radius);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+}
+
+.termIntro > * + * {
+  margin-top: var(--s-2);
+}
+
+.termIntroHead {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+  font-size: var(--t-md);
+}
+
+.termIntroPron {
+  color: var(--c-text-muted);
+  font-size: var(--t-xs);
+  letter-spacing: 0.03em;
+}
+
+.termIntroExample {
+  color: var(--c-text-muted);
+  font-style: italic;
+}
+
+/* ---- Example ---- */
+
+.example {
+  padding: var(--s-4);
+  border: 1px dashed var(--c-border-strong);
+  border-radius: var(--radius);
+}
+
+.example > * + * {
+  margin-top: var(--s-2);
+}
+
+.exampleScenario {
+  font-family: var(--f-ui);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-text-muted);
+}
+
+/* ---- Table ---- */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  min-width: 32rem;
+}
+
+.table caption {
+  text-align: left;
+  font-size: var(--t-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-text-muted);
+  padding-bottom: var(--s-2);
+}
+
+.table th,
+.table td {
+  padding: var(--s-2) var(--s-3);
+  border: 1px solid var(--c-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table thead th {
+  background: var(--c-surface-sunken);
+  font-size: var(--t-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---- Citation ---- */
+
+.citation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-2);
+  font-family: var(--f-ui);
+  font-size: var(--t-xs);
+  color: var(--c-text-faint);
+}
+
+.claimTag {
+  padding: 1px var(--s-2);
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.68rem;
+  border: 1px solid currentcolor;
+}
+
+.classical {
+  color: var(--c-kapha);
+}
+
+.contested {
+  color: var(--c-warning);
+}
+
+.modern-interpretation {
+  color: var(--c-vata);
+}
+
+.citeText {
+  font-style: normal;
+}
+
+.citeNote {
+  flex-basis: 100%;
+  font-style: italic;
+}
+
+.sourceNote {
+  padding: var(--s-3) var(--s-4);
+  background: var(--c-surface-sunken);
+  border-radius: var(--radius);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  color: var(--c-text-muted);
+}
+
+.sourceNote > * + * {
+  margin-top: var(--s-2);
+}

@@ -1,0 +1,95 @@
+/**
+ * Print stylesheet — mainly for the lifestyle plan (FR-032).
+ *
+ * The printed document must contain the plan, the profile it derives from, the
+ * generation date, and the disclaimer. The disclaimer's own module has a print
+ * block that keeps it visible on paper: an artifact that outlives the screen is
+ * exactly where Principle II matters most.
+ */
+
+@media print {
+  :root {
+    --c-bg: #fff;
+    --c-surface: #fff;
+    --c-surface-sunken: #fff;
+    --c-text: #000;
+    --c-text-muted: #333;
+    --c-text-faint: #555;
+    --c-border: #bbb;
+    --c-border-strong: #888;
+    --shadow: none;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+
+  .page {
+    max-width: none;
+    padding: 0;
+  }
+
+  /* Navigation, controls, and anything interactive have no meaning on paper. */
+  button,
+  select,
+  input,
+  .skip-link {
+    display: none !important;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  /* Keep a recommendation and its reason on the same page. */
+  li,
+  section,
+  aside,
+  table,
+  figure {
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  h1 {
+    font-size: 20pt;
+  }
+  h2 {
+    font-size: 14pt;
+  }
+
+  .card {
+    border: 1pt solid #999;
+    box-shadow: none;
+    padding: 8pt;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    border: 0.5pt solid #999;
+    padding: 3pt 5pt;
+  }
+
+  /* Print the destination of any link that survives into the document. */
+  abbr[title]::after {
+    content: ' (' attr(title) ')';
+  }
+
+  @page {
+    margin: 15mm;
+  }
+}

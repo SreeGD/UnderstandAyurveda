@@ -1,0 +1,176 @@
+.header {
+  max-width: var(--measure);
+  margin-bottom: var(--s-5);
+}
+
+.header h1 {
+  margin-bottom: var(--s-2);
+}
+
+.fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 var(--s-6);
+  max-width: var(--measure);
+}
+
+.legend {
+  padding: 0;
+  margin-bottom: var(--s-4);
+  width: 100%;
+}
+
+.prompt {
+  font-size: var(--t-xl);
+  margin-bottom: var(--s-2);
+}
+
+.prompt:focus-visible {
+  outline: 3px solid var(--c-focus);
+  outline-offset: 4px;
+}
+
+.help {
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  color: var(--c-text-muted);
+  max-width: 56ch;
+}
+
+.optional {
+  margin-top: var(--s-2);
+  font-family: var(--f-ui);
+  font-size: var(--t-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-text-faint);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  min-height: 48px;
+  padding: var(--s-4);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  background: var(--c-surface);
+  cursor: pointer;
+}
+
+.option:hover {
+  border-color: var(--c-border-strong);
+  background: var(--c-surface-sunken);
+}
+
+/* Selection is carried by border weight and the radio itself, not by colour
+   alone (FR-049). */
+.selected {
+  border-color: var(--c-primary);
+  border-width: 2px;
+  padding: calc(var(--s-4) - 1px);
+  background: var(--c-primary-soft);
+}
+
+.radio {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: var(--c-primary);
+}
+
+.optionText {
+  font-size: var(--t-base);
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+  max-width: var(--measure);
+}
+
+.actionsRight {
+  display: flex;
+  gap: var(--s-3);
+}
+
+.saveNote {
+  margin-top: var(--s-4);
+  font-family: var(--f-ui);
+  font-size: var(--t-xs);
+  color: var(--c-text-faint);
+  max-width: var(--measure);
+}
+
+/* ---- Red flag screen ---- */
+
+.flagList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  max-width: var(--measure);
+  margin-bottom: var(--s-5);
+}
+
+.flagItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  padding: var(--s-4);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  background: var(--c-surface);
+  cursor: pointer;
+}
+
+.flagChecked {
+  border-color: var(--c-warning-border);
+  background: var(--c-warning-bg);
+}
+
+.flagCheckbox {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: var(--c-primary);
+}
+
+.flagHelp {
+  display: block;
+  margin-top: var(--s-1);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  color: var(--c-text-muted);
+}
+
+.flagMessages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  max-width: var(--measure);
+  margin-bottom: var(--s-5);
+}
+
+.ackBox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  padding: var(--s-4);
+  border: 2px solid var(--c-danger-border);
+  border-radius: var(--radius);
+  background: var(--c-danger-bg);
+  max-width: var(--measure);
+  margin-bottom: var(--s-5);
+  cursor: pointer;
+}

@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.08.01",
+  "createdAt": "2026-06-01T08:00:00.000Z",
+  "updatedAt": "2026-06-14T19:32:11.000Z",
+  "preferences": {
+    "season": "summer",
+    "hasSeenOnboarding": true
+  },
+  "lessonProgress": {
+    "what-ayurveda-is": {
+      "startedAt": "2026-06-01T08:02:00.000Z",
+      "completedAt": "2026-06-01T08:09:00.000Z",
+      "knowledgeCheckPassed": true
+    },
+    "five-elements": {
+      "startedAt": "2026-06-02T07:55:00.000Z",
+      "completedAt": null,
+      "knowledgeCheckPassed": false
+    }
+  },
+  "quizAttempts": [
+    {
+      "questionId": "q-what-1",
+      "quizId": "quiz-what-ayurveda-is",
+      "answerGiven": "q-what-1-0",
+      "correct": true,
+      "answeredAt": "2026-06-01T08:08:00.000Z",
+      "sessionId": "2026-06-01T08:07:00.000Z"
+    },
+    {
+      "questionId": "q-what-2",
+      "quizId": "quiz-what-ayurveda-is",
+      "answerGiven": "q-what-2-1",
+      "correct": false,
+      "answeredAt": "2026-06-01T08:08:40.000Z",
+      "sessionId": "2026-06-01T08:07:00.000Z"
+    }
+  ],
+  "reviewState": {
+    "q-what-1": {
+      "questionId": "q-what-1",
+      "box": 1,
+      "lastAnsweredAt": "2026-06-01T08:08:00.000Z",
+      "dueAt": "2026-06-02T08:08:00.000Z",
+      "consecutiveCorrect": 1
+    },
+    "q-what-2": {
+      "questionId": "q-what-2",
+      "box": 0,
+      "lastAnsweredAt": "2026-06-01T08:08:40.000Z",
+      "dueAt": "2026-06-01T08:08:40.000Z",
+      "consecutiveCorrect": 0
+    }
+  },
+  "assessments": [
+    {
+      "id": "prakriti-2026-06-14",
+      "assessmentType": "prakriti",
+      "startedAt": "2026-06-14T19:10:00.000Z",
+      "completedAt": "2026-06-14T19:32:00.000Z",
+      "responses": {
+        "body-frame": "body-frame-v",
+        "bone-structure": "bone-structure-v",
+        "skin-texture": "skin-texture-v"
+      },
+      "redFlags": [],
+      "redFlagsAcknowledged": true,
+      "result": {
+        "percentages": { "vata": 100, "pitta": 0, "kapha": 0 },
+        "dominant": ["vata"],
+        "shape": "single",
+        "confidence": {
+          "level": "low",
+          "signals": { "completeness": 0.06, "separation": 1, "consistency": 1 },
+          "reasons": [
+            "You answered 3 of 50 questions. With this many left out, the result is a rough sketch rather than a reading."
+          ]
+        },
+        "breakdown": [
+          {
+            "questionId": "body-frame",
+            "questionPrompt": "How would you describe your natural body frame?",
+            "answerText": "Slight and narrow — I have always been on the thin or lanky side",
+            "reliability": 2,
+            "points": { "vata": 2, "pitta": 0, "kapha": 0 }
+          }
+        ],
+        "subProfiles": {
+          "physical": { "vata": 100, "pitta": 0, "kapha": 0 }
+        },
+        "rawTotals": { "vata": 5.8, "pitta": 0, "kapha": 0 },
+        "answeredCount": 3,
+        "totalCount": 50
+      },
+      "contentVersion": "2026.08.01"
+    }
+  ]
+}

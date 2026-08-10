@@ -1,0 +1,99 @@
+.header {
+  max-width: var(--measure);
+  margin-bottom: var(--s-5);
+}
+
+.header h1 {
+  margin-bottom: var(--s-2);
+}
+
+.section {
+  max-width: var(--measure);
+  margin-top: var(--s-6);
+}
+
+.section h2 {
+  margin-bottom: var(--s-3);
+}
+
+.section > * + * {
+  margin-top: var(--s-3);
+}
+
+.message {
+  max-width: var(--measure);
+  padding: var(--s-4);
+  border: 1px solid var(--c-success);
+  background: var(--c-success-bg);
+  border-radius: var(--radius);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  margin-bottom: var(--s-5);
+}
+
+.categoryList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.category {
+  padding: var(--s-4);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  background: var(--c-surface);
+}
+
+.categoryHead {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-3);
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.categoryLabel {
+  font-family: var(--f-ui);
+  font-weight: 700;
+  font-size: var(--t-sm);
+}
+
+.categoryCount {
+  font-family: var(--f-ui);
+  font-size: var(--t-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--c-text-muted);
+}
+
+.categoryDesc {
+  margin-top: var(--s-2);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  color: var(--c-text-muted);
+}
+
+.confirmBox {
+  padding: var(--s-5);
+  border: 2px solid var(--c-danger-border);
+  background: var(--c-danger-bg);
+  border-radius: var(--radius);
+}
+
+.confirmActions {
+  display: flex;
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+  flex-wrap: wrap;
+}
+
+.inlineButton {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--c-primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
