@@ -67,7 +67,10 @@ const networkRestriction = {
 }
 
 export default tseslint.config(
-  { ignores: ['dist', 'dev-dist', 'node_modules', 'coverage'] },
+  // `dist-review` is a local single-file bundle used for sharing a review
+  // build. It is gitignored, so CI never sees it — but without it here, a
+  // local `npm run lint` drowns in errors from minified output.
+  { ignores: ['dist', 'dist-review', 'dev-dist', 'node_modules', 'coverage'] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
