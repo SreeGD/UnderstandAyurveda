@@ -17,3 +17,9 @@ Thumbs.db
 *.swp
 .vscode/
 .idea/
+
+# Local review-build scratch (single-file artifact bundle)
+dist-review/
+src/__review.tsx
+index.review.html
+vite.review.config.ts

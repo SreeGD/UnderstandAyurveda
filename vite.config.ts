@@ -23,7 +23,15 @@ function staticHostFallbacks(): Plugin {
   }
 }
 
+/**
+ * GitHub Pages serves a project site from a subpath
+ * (sreegd.github.io/UnderstandAyurveda/), so assets and routes need that
+ * prefix. CI sets PAGES_BASE; local dev and any root-domain host stay at '/'.
+ */
+const base = process.env.PAGES_BASE ?? '/'
+
 export default defineConfig({
+  base,
   plugins: [
     react(),
     staticHostFallbacks(),
@@ -45,7 +53,7 @@ export default defineConfig({
         theme_color: '#1f4d3d',
         background_color: '#fbf9f4',
         display: 'standalone',
-        start_url: '/',
+        start_url: base,
         icons: [],
       },
     }),

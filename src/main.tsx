@@ -16,7 +16,9 @@ if (!root) throw new Error('Root element missing from index.html')
 
 createRoot(root).render(
   <StrictMode>
-    <BrowserRouter>
+    {/* BASE_URL is '/' everywhere except a GitHub Pages project site, where it
+        is the repo subpath — see `base` in vite.config.ts. */}
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <App />
     </BrowserRouter>
   </StrictMode>
