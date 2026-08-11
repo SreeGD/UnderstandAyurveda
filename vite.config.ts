@@ -24,11 +24,20 @@ function staticHostFallbacks(): Plugin {
 }
 
 /**
- * GitHub Pages serves a project site from a subpath
- * (sreegd.github.io/UnderstandAyurveda/), so assets and routes need that
- * prefix. CI sets PAGES_BASE; local dev and any root-domain host stay at '/'.
+ * Where the site is served from.
+ *
+ * A GitHub Pages *project* site lives at a subpath
+ * (sreegd.github.io/UnderstandAyurveda/), so assets and routes need that prefix.
+ * A *custom domain* serves from the root, and keeping the subpath there would
+ * 404 every asset.
+ *
+ * `public/CNAME` is the single source of truth: GitHub requires that file to
+ * serve a custom domain, so its presence is exactly the condition under which
+ * the base must be '/'. Adding the domain is therefore one file, and the two
+ * settings cannot drift out of step.
  */
-const base = process.env.PAGES_BASE ?? '/'
+const customDomain = existsSync(resolve(__dirname, 'public/CNAME'))
+const base = customDomain ? '/' : (process.env.PAGES_BASE ?? '/')
 
 export default defineConfig({
   base,
